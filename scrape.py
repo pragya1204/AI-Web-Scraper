@@ -10,8 +10,6 @@ load_dotenv()
 
 SBR_WEBDRIVER = os.getenv("SBR_WEBDRIVER")
 # This is a simple web scraping function using Selenium and the Browser API.
-if not SBR_WEBDRIVER:
-    raise ValueError("SBR_WEBDRIVER environment variable not set.")
 
 def scrape_website(website):
     print('Connecting to Browser API...')
