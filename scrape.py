@@ -11,6 +11,7 @@ load_dotenv()
 SBR_WEBDRIVER = os.getenv("SBR_WEBDRIVER")
 # This is a simple web scraping function using Selenium and the Browser API.
 
+assert SBR_WEBDRIVER, "SBR_WEBDRIVER must be set in the .env file"
 def scrape_website(website):
     print('Connecting to Browser API...')
     sbr_connection = ChromiumRemoteConnection(SBR_WEBDRIVER, 'goog', 'chrome')
